@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 
     // ⚠️ PENTING: Ganti URL ini dengan URL backend Anda setelah di-deploy di Render.
     // 
-    const BACKEND_URL = 'http://127.0.0.1:5001'; 
+    const BACKEND_URL = 'https://code-assessor-rag-backend.onrender.com'; 
 
     // Mengambil referensi ke semua elemen HTML yang dibutuhkan
     const problemSelector = document.getElementById('problemSelector');
@@ -165,4 +165,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Memanggil fungsi untuk memuat soal saat halaman pertama kali dibuka
     loadProblems();
+
 });
