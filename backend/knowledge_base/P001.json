@@ -1,0 +1,12 @@
+{
+  "problem_id": "P001",
+  "title": "Jumlah Bilangan Genap",
+  "description": "Buatlah sebuah program C++ yang meminta pengguna memasukkan sebuah bilangan bulat positif. Program kemudian harus menghitung dan menampilkan jumlah dari semua bilangan genap dari 1 hingga bilangan yang dimasukkan tersebut.\n\nContoh Input:\n10\n\nContoh Output:\nJumlah bilangan genap hingga 10 adalah: 30\n(Karena 2 + 4 + 6 + 8 + 10 = 30)",
+  "ideal_solution": "#include <iostream>\n\nint main() {\n    int n;\n    std::cout << \"Masukkan sebuah bilangan bulat positif: \";\n    std::cin >> n;\n    int sum = 0;\n    for (int i = 2; i <= n; i += 2) {\n        sum += i;\n    }\n    std::cout << \"Jumlah bilangan genap hingga \" << n << \" adalah: \" << sum << std::endl;\n    return 0;\n}",
+  "rubric": {
+    "kebenaran_fungsional": "Bobot: 40%. Apakah kode menghasilkan output yang benar untuk semua kasus uji (termasuk angka ganjil dan kecil)?",
+    "efisiensi": "Bobot: 20%. Apakah algoritma efisien? (Misalnya, iterasi langsung ke bilangan genap `i += 2` lebih baik daripada memeriksa `i % 2 == 0` di setiap iterasi).",
+    "keterbacaan": "Bobot: 20%. Apakah kode mudah dibaca? Apakah penamaan variabel jelas?",
+    "praktik_baik": "Bobot: 20%. Apakah program menyertakan header yang diperlukan dan memiliki struktur `main` yang benar?"
+  }
+}

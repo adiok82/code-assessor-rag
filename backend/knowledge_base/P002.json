@@ -1,0 +1,12 @@
+{
+  "problem_id": "P002",
+  "title": "Cek Bilangan Prima",
+  "description": "Buatlah program C++ yang meminta pengguna memasukkan sebuah bilangan bulat positif. Program harus menentukan apakah bilangan tersebut adalah bilangan prima atau bukan.\n\nBilangan prima adalah bilangan yang lebih besar dari 1 dan hanya memiliki dua faktor, yaitu 1 dan dirinya sendiri.\n\nContoh Input:\n7\n\nContoh Output:\n7 adalah bilangan prima.",
+  "ideal_solution": "#include <iostream>\n#include <cmath>\n\nint main() {\n    int n;\n    std::cout << \"Masukkan bilangan bulat positif: \";\n    std::cin >> n;\n    bool isPrime = true;\n    if (n <= 1) {\n        isPrime = false;\n    } else {\n        for (int i = 2; i <= sqrt(n); ++i) {\n            if (n % i == 0) {\n                isPrime = false;\n                break;\n            }\n        }\n    }\n    if (isPrime) {\n        std::cout << n << \" adalah bilangan prima.\" << std::endl;\n    } else {\n        std::cout << n << \" bukan bilangan prima.\" << std::endl;\n    }\n    return 0;\n}",
+  "rubric": {
+    "kebenaran_fungsional": "Bobot: 40%. Apakah kode menangani kasus dasar (0, 1, 2) dengan benar? Apakah logika primanya benar?",
+    "efisiensi": "Bobot: 20%. Apakah loop berhenti pada akar kuadrat dari n (`sqrt(n)`) untuk optimalisasi?",
+    "keterbacaan": "Bobot: 20%. Apakah variabel boolean seperti `isPrime` digunakan untuk kejelasan?",
+    "praktik_baik": "Bobot: 20%. Apakah header `<cmath>` disertakan untuk fungsi `sqrt`? Apakah logika `break` digunakan setelah faktor ditemukan?"
+  }
+}
